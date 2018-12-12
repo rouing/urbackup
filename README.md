@@ -1,7 +1,10 @@
 # urbackup
 UrBackup Server in a Docker but always up to date [Version Tagging Included]
 
-[![Docker Automated buil](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/rouing/urbackup/)
+[![Docker Automated buil](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/rouing/urbackup/) 
+
+[![pipeline status](https://git.rouing.me/docker/urbackup/badges/master/pipeline.svg)](https://git.rouing.me/docker/urbackup/commits/master)
+
 
 UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
 
