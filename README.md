@@ -1,9 +1,7 @@
-# urbackup-docker
-:floppy_disk: docker container for urbackup-server
+# urbackup
+UrBackup Server in a Docker but always up to date [Version Tagging Included]
 
-[![Docker Automated buil](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/tristanteu/urbackup-docker/)
-
-`Version 2.3.7`
+[![Docker Automated buil](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/rouing/urbackup/)
 
 UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
 
@@ -32,7 +30,7 @@ docker run \
 ```
 
 ### WebUI
-yourserverip:55414
+`host:55414`
 
 ### Show all Cli Commands
 ```bash
@@ -70,9 +68,9 @@ if you don't want to use net="host" you can expose the following ports
 
 ### Build
 ```bash
-$ git clone https://git.rouing.me/docker/urbackup.git
+$ git clone https://git.rouing.me/docker/urbackup.git # or https://github.com/rouing/urbackup
 $ cd urbackup
-$ docker build -t tristanteu/urbackup-docker .
+$ docker build -t rouing/urbackup-docker .
 ```
 
 ### Important - First Start
@@ -88,4 +86,4 @@ chmod 777 -R /media/8tb.wd.red/backup/
 ```
 
 
-Based on tristanteu/urbackup-docker but with automated version pulling.
+Based on tristanteu/urbackup-docker but with automated version pulling and version tagging
