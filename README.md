@@ -12,7 +12,11 @@ UrBackup is an easy to setup Open Source client/server backup system, that throu
 
 ### Pull:
 ```bash
-docker pull tristanteu/urbackup-docker
+docker pull rouing/urbackup
+```
+
+```bash
+docker pull docker.rouing.me/docker/urbackup
 ```
 
 ### Run:
@@ -24,7 +28,7 @@ docker run \
 -v /home/docker/urbackup/db/:/var/urbackup \
 -v /media/8tb.wd.red/backup/:/backup \
 --net="host" \
--d tristanteu/urbackup-docker
+-d rouing/urbackup
 ```
 
 ### WebUI
@@ -33,12 +37,12 @@ yourserverip:55414
 ### Show all Cli Commands
 ```bash
 docker run \
---rm tristanteu/urbackup-docker --help
+--rm rouing/urbackup --help
 ```
 
 ### Remove-Unkown
 Cleaning the backup folder of files not known by UrBackup Database  
-[urbackup dokumentation](https://www.urbackup.org/administration_manual.html#x1-10000011.4)  
+[urbackup documentation](https://www.urbackup.org/administration_manual.html#x1-10000011.4)  
 ```bash
 docker run \
 -v /home/docker/urbackup/db/:/var/urbackup \
@@ -49,7 +53,7 @@ docker run \
 ### Cleanup
 Percent of space to free on the backup storage or the number of Bytes/ Megabytes/ Gigabytes e.g. “20G” or “10%”.  
 If it should only delete old backups use “0%”.  
-[urbackup dokumentation](https://www.urbackup.org/administration_manual.html#x1-9900011.3)  
+[urbackup documentation](https://www.urbackup.org/administration_manual.html#x1-9900011.3)  
 ```bash
 docker run \
 -v /home/docker/urbackup/db/:/var/urbackup \
@@ -66,8 +70,8 @@ if you don't want to use net="host" you can expose the following ports
 
 ### Build
 ```bash
-$ git clone https://github.com/firsttris/urbackup-docker.git
-$ cd urbackup-docker
+$ git clone https://git.rouing.me/docker/urbackup.git
+$ cd urbackup
 $ docker build -t tristanteu/urbackup-docker .
 ```
 
@@ -83,9 +87,5 @@ chmod 777 -R /home/docker/urbackup/
 chmod 777 -R /media/8tb.wd.red/backup/
 ```
 
-## Code of Conduct
-See the [CODE](CODE_OF_CONDUCT.md)
 
-
-## License
-See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
+Based on tristanteu/urbackup-docker but with automated version pulling.
