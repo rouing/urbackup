@@ -80,7 +80,7 @@ $ docker build -t rouing/urbackup-docker .
 - on the first start urbackup complains about the backup directory  
 - set /backup to your backup directory (settings)  
 - mount this directory to your actual backup directory on your host  
-`-v /media/12TBWDRED/yourActualBackupDirectory/:/backup`
+`-v /some-distributed-filesystem/backup/:/backup`
 - ensure correct permissions on the host folders your mounting  
 e.g.  
 ```bash
