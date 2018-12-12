@@ -27,7 +27,7 @@ docker run \
 --restart=always \
 -v /etc/localtime:/etc/localtime:ro \
 -v /home/docker/urbackup/db/:/var/urbackup \
--v /media/8tb.wd.red/backup/:/backup \
+-v /some-distributed-filesystem/backup/:/backup \
 --net="host" \
 -d rouing/urbackup
 ```
@@ -47,8 +47,8 @@ Cleaning the backup folder of files not known by UrBackup Database
 ```bash
 docker run \
 -v /home/docker/urbackup/db/:/var/urbackup \
--v /media/8tb.wd.red/backup/:/backup \
---rm tristanteu/urbackup-docker remove-unknown
+-v /some-distributed-filesystem/backup/:/backup \
+--rm rouing/urbackup remove-unknown
 ```
 
 ### Cleanup
@@ -58,8 +58,8 @@ If it should only delete old backups use “0%”.
 ```bash
 docker run \
 -v /home/docker/urbackup/db/:/var/urbackup \
--v /media/8tb.wd.red/backup/:/backup \
---rm tristanteu/urbackup-docker cleanup --amount 0%
+-v /some-distributed-filesystem/backup/:/backup \
+--rm rouing/urbackup cleanup --amount 0%
 ```
 
 ### Network Mode
@@ -85,7 +85,7 @@ $ docker build -t rouing/urbackup-docker .
 e.g.  
 ```bash
 chmod 777 -R /home/docker/urbackup/  
-chmod 777 -R /media/8tb.wd.red/backup/
+chmod 777 -R /some-distributed-filesystem/backup/
 ```
 
 
